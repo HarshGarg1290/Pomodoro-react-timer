@@ -1,0 +1,62 @@
+.music-player {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Overpass", sans-serif;
+    font-weight: 800;
+  }
+  
+  .music-player input[type="text"] {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fafafa;
+    font-size: 1rem;
+    outline: none;
+    width: 300px;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .music-player input[type="text"]::placeholder {
+    color: #fafafa;
+    opacity: 0.5;
+  }
+  
+  .music-player button {
+    border: none;
+    background-color: transparent;
+    color: #fafafa;
+    font-size: 1.5rem;
+    margin-left: 20px;
+    cursor: pointer;
+    opacity: 0.5;
+    filter: drop-shadow(1px 1px 10px rgba(0, 0, 0, 0.4));
+    transition: all 0.2s ease;
+  }
+  
+  .music-player button:hover,
+  .music-player button:active {
+    scale: 1.1;
+    opacity: 1;
+  }
+  
+  .music-player button:active {
+    scale: 0.9;
+  }
+  
+  .music-player .react-player {
+    display: none;
+  }
+  
+  @media (max-width: 480px) {
+    .music-player {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .music-player button {
+      margin-left: 0;
+      margin-top: 15px;
+    }
+  }

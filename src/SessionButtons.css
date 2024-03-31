@@ -1,0 +1,58 @@
+.SessionButtons button {
+	font-family: "Josefin Sans", sans-serif;
+	border: none;
+	border-radius: 2rem;
+	background-color: rgb(250, 250, 250, 0.55);
+	color: #2e2626;
+	padding: 0.9rem;
+	order: 3;
+	margin: 0.5rem 0.5rem;
+	transition: scale 0.5s ease;
+}
+
+.SessionButtons button:hover {
+	cursor: pointer;
+	background-color: #fafafa;
+}
+
+.SessionButtons button:active {
+	scale: 0.9;
+}
+
+.SessionButtons button.active {
+	background-color: #fafafa;
+}
+
+.SessionButtons .break-buttons {
+	display: flex;
+}
+
+.SessionButtons .break-buttons button {
+	font-size: 1rem;
+}
+
+.SessionButtons .break-buttons .short-break {
+	flex-grow: 1;
+}
+
+.SessionButtons .break-buttons .long-break {
+	flex-grow: 11;
+}
+
+.SessionButtons .focus {
+	width: calc(100% - 1rem);
+	font-size: 1.3rem;
+}
+
+@media (max-width: 480px) {
+	.SessionButtons button {
+		padding: 0.7rem;
+	}
+
+	.SessionButtons .break-buttons button {
+		font-size: 0.9rem;
+	}
+	.SessionButtons .focus {
+		font-size: 1.2rem;
+	}
+}

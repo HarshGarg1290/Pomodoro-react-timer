@@ -1,0 +1,90 @@
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,regular&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Overpass:400,800&display=swap);
+
+.App {
+	position: relative;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-image: url(https://source.unsplash.com/random/?free,landscape,nature);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	transition: background-image 6s ease;
+}
+
+.App .gradient {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 300px;
+	background-image: linear-gradient(
+		to bottom,
+		rgba(0, 0, 0, 0),
+		rgba(0, 0, 0, 0.4)
+	);
+	pointer-events: none;
+}
+
+.App .container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 65vh;
+	width: 400px;
+	margin: 5px;
+	padding: 30px;
+	border-radius: 16px;
+	color: #fafafa;
+	backdrop-filter: blur(0.5rem);
+	box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+}
+
+.App .footer {
+	position: fixed;
+	display: flex;
+	bottom: 20px;
+	font-family: "Josefin Sans", sans-serif;
+	font-size: 2rem;
+	font-weight: 300;
+	color: #fafafa;
+}
+
+.App .footer div {
+	margin: 0 10px;
+}
+
+.App .footer button {
+	background: none;
+	border: none;
+	color: #fafafa;
+	font-family: inherit;
+	font-size: 2rem;
+	font-weight: 300;
+	text-decoration: none;
+	filter: drop-shadow(1px 1px 10px rgba(0, 0, 0, 0.8));
+}
+
+.App .footer button:hover {
+	cursor: pointer;
+	font-weight: 500;
+}
+
+@media (max-width: 480px) {
+	.App .container {
+		width: auto;
+		max-width: 75%;
+		min-height: auto;
+		padding: 20px;
+		justify-content: space-around;
+	}
+
+	.App .footer {
+		font-size: 0.8rem;
+	}
+}
